@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const ActionButtons = (props) => {
   return (
-    <div style={{ margin: '25px auto', textAlign: 'center' }}>
+    <div className='buttons'>
       <button
         className='button'
         onClick={() => props.shuffleCards(props.deckArray)}

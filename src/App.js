@@ -50,15 +50,7 @@ function App() {
 
   return (
     <div className='App'>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          padding: '40px auto 0px 0px',
-          marginLeft: '200px',
-          height: '400px',
-        }}
-      >
+      <div className='deck-container'>
         {cardsArray &&
           cardsArray.map((card, index) => {
             return (
@@ -74,14 +66,7 @@ function App() {
         resetCards={resetCards}
         deckArray={deckArray}
       />
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          padding: '40px auto 0px 0px',
-          marginLeft: '400px',
-        }}
-      >
+      <div className='card-picked'>
         {cardPicked &&
           cardPicked.map((card, index) => {
             return (

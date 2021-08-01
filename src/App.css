@@ -6,50 +6,88 @@
   overflow-x: hidden;
   overflow-y: scroll;
   width: 100%;
+  padding: 50px 0px;
+}
 
-  padding: 50px;
+@media (min-width: 750px) {
+  .App {
+    padding: 50px;
+  }
+}
+
+.deck-container {
+  display: flex;
+  justify-content: center;
+  margin-left: 100px;
+  height: 30vh;
+  align-items: center;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+
+@media (min-width: 750px) {
+  .deck-container {
+    justify-content: space-between;
+  }
+}
+
+.card-picked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  margin-left: 50vw;
 }
 
 .card-container {
-  height: 400px;
+  height: 30vh;
   width: 250px;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   position: relative;
   border-radius: 10px;
-  margin-left: -200px;
+  margin-left: -240px;
 }
 
 .single-card-container {
   max-width: 80vw;
-  background-size: cover;
+  background-size: contain;
   position: relative;
   border-radius: 10px;
-  margin-left: -100vw;
 
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: center;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-end;
+}
+
+@media (min-width: 750px) {
+  .single-card-container {
+    justify-content: flex-start;
+  }
 }
 
 .width {
-  max-width: 80vw;
+  max-width: 75vw;
+  max-height: 50vh;
+  margin-left: -75vw;
 }
 
 @media (min-width: 750px) {
   .width {
-    max-width: 50vw;
-    margin-left: 28vw;
+    max-width: 30vw;
+    margin-left: -30vw;
   }
 }
 
 .button {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 10px 20px;
   border-radius: 10px;
-  margin: 10px;
+  margin: 5px;
   background-image: linear-gradient(
     to right,
     #d1913c 0%,
@@ -68,8 +106,19 @@
 }
 
 .button:hover {
-  background-position: right center; /* change the direction of the change here */
+  background-position: right center;
   color: #000;
   text-decoration: none;
   font-weight: 800;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 10px;
+  text-align: center;
 }

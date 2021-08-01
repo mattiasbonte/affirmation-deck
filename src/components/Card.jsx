@@ -9,9 +9,7 @@ const Card = (props) => {
   if (front === true) {
     return (
       <div className={singleCard ? `single-card-container` : `card-container`}>
-        <div className='width'>
-          <img src={image} alt='card' className='width' />
-        </div>
+        <img src={image} alt='card' className='width' />
       </div>
     );
   } else {
