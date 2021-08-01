@@ -34,12 +34,12 @@ function App() {
     let cardsArrayStart = cloneDeep(cardsArray);
     const randomItem =
       cardsArrayStart[Math.floor(Math.random() * cardsArrayStart.length)];
-    const newCardsArray = cardsArrayStart.filter(
+    /*const newCardsArray = cardsArrayStart.filter(
       (element) => element.index !== randomItem.index
     );
-    setCardsArray(newCardsArray);
+    setCardsArray(newCardsArray);*/
     let cardsPickedArray = cloneDeep(cardPicked);
-    cardsPickedArray.length < 44 && cardsPickedArray.push(randomItem);
+    cardsPickedArray.push(randomItem);
     setCardPicked(cardsPickedArray);
   };
 
