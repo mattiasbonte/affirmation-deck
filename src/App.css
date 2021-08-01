@@ -1,38 +1,75 @@
 .App {
   text-align: center;
+  background-image: url('../src/assets/Achtergrond.png');
+  background-size: cover;
+  background-repeat: repeat;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100%;
+
+  padding: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-container {
+  height: 400px;
+  width: 250px;
+  background-size: cover;
+  position: relative;
+  border-radius: 10px;
+  margin-left: -200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.single-card-container {
+  max-width: 80vw;
+  background-size: cover;
+  position: relative;
+  border-radius: 10px;
+  margin-left: -100vw;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.width {
+  max-width: 80vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 750px) {
+  .width {
+    max-width: 50vw;
+    margin-left: 28vw;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 10px;
+  margin: 10px;
+  background-image: linear-gradient(
+    to right,
+    #d1913c 0%,
+    #ffd194 51%,
+    #d1913c 100%
+  );
+
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: black;
+  box-shadow: 0 0 20px #000;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #000;
+  text-decoration: none;
+  font-weight: 800;
 }
