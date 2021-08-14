@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import backCardImg from '../assets/Kaarten/Varia/Achterkant.png';
+import backCardImg from '../assets/Kaarten/Varia/Achterkant.webp';
 import '../App.css';
 
 const Card = (props) => {

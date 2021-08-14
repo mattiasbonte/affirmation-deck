@@ -4,7 +4,7 @@ import './App.css';
 import Card from './components/Card';
 import ActionButtons from './components/ActionButtons';
 import { deckArray } from './utils/DeckArray';
-import InfoCard from './assets/Kaarten/Varia/Info.png';
+import InfoCard from './assets/Kaarten/Varia/Info.webp';
 
 function App() {
   const [cardsArray, setCardsArray] = useState(deckArray);
