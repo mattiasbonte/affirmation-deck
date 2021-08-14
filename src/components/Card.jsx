@@ -1,23 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import backCardImg from '../assets/Kaarten/Varia/Achterkant.webp';
-import '../App.css';
+// import '../App.css';
 
 const Card = (props) => {
   const { front, image, singleCard } = props;
 
   if (front === true) {
-    return (
-      <div className={singleCard ? `single-card-container` : `card-container`}>
-        <img src={image} alt='card' className='width' />
-      </div>
-    );
+    return <img src={image} alt="card" className="h-full mx-auto" />;
   } else {
     return (
-      <div
-        className={singleCard ? `single-card-container` : `card-container`}
-        style={{ backgroundImage: `url(${backCardImg})` }}
-      ></div>
+      <div className={singleCard ? `single-card-container` : `card-container`} style={{ backgroundImage: `url(${backCardImg})` }}></div>
     );
   }
 };
