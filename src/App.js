@@ -8,7 +8,7 @@ import InfoCard from './assets/Kaarten/Varia/Info.webp';
 function App() {
   const [cardsArray, setCardsArray] = useState(deckArray);
   const [cardPicked, setCardPicked] = useState([{ element: 'intro', image: InfoCard, index: 0 }]);
-  const [front, setFront] = useState(false);
+  const [front] = useState(false);
 
   useEffect(() => {}, [cardsArray]);
 

@@ -17,7 +17,9 @@
     "start": "npm-run-all --parallel start:*",
     "start:server": "react-scripts start",
     "start:css": "npx tailwindcss -o ./src/index.css --jit --watch",
-    "build": "react-scripts build",
+    "build": "npm-run-all --parallel build:*",
+    "build:css": "npx tailwindcss -o ./src/index.css --minify",
+    "build:server": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
