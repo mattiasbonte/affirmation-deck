@@ -8,7 +8,7 @@ const ActionButtons = ({ shuffleCards, dealOneCard, resetCards, deckArray }) => 
   const hover = 'hover:font-bold hover:via-amber-300';
 
   return (
-    <div className="sm:relative fixed bottom-0 flex justify-around w-full mt-3">
+    <div className="sm:relative fixed bottom-0 flex justify-around mt-3">
       <button onClick={() => shuffleCards(deckArray)} type="button" className={`${general} ${font} ${gradient} ${hover} flex-1`}>
         Shuffle
       </button>
