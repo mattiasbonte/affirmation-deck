@@ -1,41 +1,30 @@
 import React from 'react'
 interface Props {
-  shuffleDeck: Function
   drawCard: Function
-  resetDeck: Function
+  showInfoCard: Function
 }
 
-const Controls = ({ shuffleDeck, drawCard, resetDeck }: Props) => {
-  const general = 'h-full border-2 border:true-gray-200 dark:border-gray-700'
-  const font = 'text-[2vh] sm:text-lg'
-  const gradient = 'bg-gradient-to-r from-[#d1913c] via-[#ffd194] to-[#d1913c]'
-  const hover = 'hover:font-bold hover:via-amber-300'
+const Controls = ({ drawCard, showInfoCard }: Props) => {
+  const gradient = ''
+  const hover = ''
 
   return (
-    <div className="h-[8vh] max-h-12 sm:h-12 my-2 flex items-center justify-around w-full max-w-xs mx-auto overflow-hidden shadow-xl">
-      <button
-        onClick={() => shuffleDeck()}
-        type="button"
-        className={`${general} ${font} ${gradient} ${hover} flex-1 rounded-l-lg`}
-        title="Shuffle Deck"
-      >
-        Shuffle
-      </button>
+    <div className="mx-auto">
       <button
         onClick={() => drawCard()}
         type="button"
-        className={`${general} ${font} ${gradient} ${hover} flex-grow`}
+        className="sm:w-48 hover:text-white rounded-md sm:rounded-xl p-1 sm:p-3 sm:font-bold uppercase w-20 border hover:border-gray-300 border-yellow-600 bg-gradient-to-r from-[#d1913c] via-[#ffd194] to-[#d1913c] hover:font-bold hover:via-amber-300"
         title="Draw A New Card"
       >
         Draw
       </button>
       <button
-        onClick={() => resetDeck()}
+        onClick={() => showInfoCard()}
         type="button"
-        className={`${general} ${font} ${gradient} ${hover} flex-1 rounded-r-lg`}
-        title="Reset Deck"
+        className="absolute m-2 left-0 bottom-0 h-8 w-8 text-white border border-gray-400 shadow-xl bg-[#494946] rounded-full hover:shadow-2xl hover:scale-110 hover:bg-gray-700 hover:border-gray-700"
+        title="See Information Card"
       >
-        Reset
+        ?
       </button>
     </div>
   )
