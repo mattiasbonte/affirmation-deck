@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Controls from './components/Controls'
 import Deck from './utils/Deck'
 import Card from './components/Card'
@@ -38,20 +38,22 @@ const App = () => {
   }
 
   const reviewCard = (card: card): void => {
-    setDrawnCards([...drawnCards, activeCard])
+    setDrawnCards([activeCard, ...drawnCards])
     setActiveCard(card)
     setDrawnCards(drawnCards.filter((el) => el !== card))
   }
 
+  //   useEffect()
+
   return (
     <div className="bg-true-gray-200 dark:bg-gray-700 max-w-screen relative flex flex-col w-screen h-screen p-2 pt-5 overflow-hidden">
       <Card image={activeCard.image} element={activeCard.element} />
-      <div className="whitespace-nowrap h-52 absolute top-0 overflow-x-hidden -translate-y-24">
+      <div className="whitespace-nowrap h-60 absolute top-0 overflow-x-hidden -translate-y-24">
         {drawnCards.map((card, index) => (
           <div
             onClick={() => reviewCard(card)}
             key={index}
-            className="hover:translate-y-24 relative inline-block w-16 overflow-visible transition-all duration-500 cursor-pointer"
+            className="hover:scale-150 hover:translate-y-24 relative inline-block w-16 overflow-visible transition-all duration-500 cursor-pointer"
           >
             <Card image={card.image} element={card.element}></Card>
           </div>

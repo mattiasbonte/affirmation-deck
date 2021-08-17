@@ -997,6 +997,12 @@ video {
   transform: var(--tw-transform);
 }
 
+.hover\:scale-150:hover {
+  --tw-scale-x: 1.5;
+  --tw-scale-y: 1.5;
+  transform: var(--tw-transform);
+}
+
 .hover\:via-amber-300:hover {
   --tw-gradient-stops: var(--tw-gradient-from), #fcd34d, var(--tw-gradient-to, rgba(252, 211, 77, 0));
 }
