@@ -46,25 +46,33 @@ const App = () => {
   //   useEffect()
 
   return (
-    <div className="bg-true-gray-200 dark:bg-gray-700 max-w-screen relative flex flex-col w-screen h-screen p-2 pt-5 overflow-hidden">
-      <div className="">
+    // <div className="bg-true-gray-200 dark:bg-gray-700 max-w-screen relative w-screen h-screen p-2 pt-5 overflow-hidden">
+    <div className="grid-cols-1 grid w-screen h-screen justify-center items-center grid-rows-[9fr,1fr]">
+      <div className="w-full h-full bg-orange-500">
         <Card image={activeCard.image} element={activeCard.element} />
       </div>
-      <div className="whitespace-nowrap h-60 absolute top-0 overflow-x-hidden -translate-y-24">
-        {drawnCards.map((card, index) => (
-          <div
-            onClick={() => reviewCard(card)}
-            key={index}
-            className="hover:scale-150 hover:translate-y-24 relative inline-block w-16 overflow-visible transition-all duration-500 cursor-pointer"
-          >
-            <Card image={card.image} element={card.element}></Card>
-          </div>
-        ))}
-      </div>
-      <div className="">
+      <div className="flex items-center h-full row-span-1 bg-green-500">
         <Controls shuffleDeck={shuffleDeck} drawCard={drawCard} resetDeck={resetDeck} />
       </div>
+      {/* <div className="">
+          <Card image={activeCard.image} element={activeCard.element} />
+        </div>
+        <div className="whitespace-nowrap h-60 absolute top-0 overflow-x-hidden -translate-y-24">
+          {drawnCards.map((card, index) => (
+            <div
+              onClick={() => reviewCard(card)}
+              key={index}
+              className="hover:scale-150 hover:translate-y-24 relative inline-block w-16 overflow-visible transition-all duration-500 cursor-pointer"
+            >
+              <Card image={card.image} element={card.element}></Card>
+            </div>
+          ))}
+        </div>
+        <div className="">
+          <Controls shuffleDeck={shuffleDeck} drawCard={drawCard} resetDeck={resetDeck} />
+        </div> */}
     </div>
+    // </div>
   )
 }
 
