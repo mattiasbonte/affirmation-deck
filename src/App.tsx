@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Controls from './components/Controls'
 import Deck from './utils/Deck'
 import Card from './components/Card'
@@ -12,21 +12,32 @@ interface card {
 
 const App = () => {
   const [activeCard, setActiveCard]: [card, Function] = useState({ element: 'intro', image: InfoCard })
+  const [flipCard, setFlipCard] = useState(false)
 
   const drawCard = (): void => {
+    if (flipCard) return
     const randIndex = Math.floor(Math.random() * Deck.length)
-    setActiveCard(Deck[randIndex])
-    if (Deck.length === 0) setActiveCard({ element: 'empty', image: Achterkant })
+    setFlipCard(!flipCard)
+    setTimeout(() => {
+      setActiveCard(Deck[randIndex])
+    }, 300)
   }
+
+  useEffect(() => {
+    if (!flipCard) return
+    setTimeout(() => {
+      setFlipCard(!flipCard)
+    }, 1400)
+  }, [flipCard])
 
   const showInfoCard = (): void => {
     setActiveCard({ element: 'intro', image: InfoCard })
   }
 
   return (
-    <div className="bg-gradient-to-r from-gray-300 to-gray-500 dark:from-blue-gray-500 dark:via-blue-gray-600 dark:to-gray-700">
+    <div className="bg-gradient-to-r from-gray-300 to-gray-500 dark:from-blue-gray-500 dark:via-blue-gray-600 dark:to-gray-700 overflow-hidden">
       <div className="grid-cols-1 grid w-screen h-screen p-2 justify-center items-center grid-rows-[9fr,1fr]">
-        <div className="relative w-full h-full">
+        <div className={`relative w-full h-full transition-all ${flipCard ? 'translate-x-[-80%] translate-y-[-160%] -rotate-45 duration-300' : 'duration-700'}`}>
           <Card image={activeCard.image} element={activeCard.element} />
         </div>
         <div className=" flex items-center h-full row-span-1">

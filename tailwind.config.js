@@ -28,6 +28,16 @@ module.exports = {
         pink: colors.pink,
         rose: colors.rose,
       },
+      keyframes: {
+        flipCard: {
+          '0%, 100%': { transform: 'rotateY(180deg)' },
+
+          '50%': { transform: 'rotateY(90deg)' },
+        },
+      },
+      animation: {
+        flipCard: 'flipCard 1s ease-in-out infinite',
+      },
       backgroundImage: (theme) => ({
         'dark-pattern': "url('../src/assets/Achtergrond.webp')",
       }),
