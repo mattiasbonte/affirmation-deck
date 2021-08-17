@@ -47,7 +47,9 @@ const App = () => {
 
   return (
     <div className="bg-true-gray-200 dark:bg-gray-700 max-w-screen relative flex flex-col w-screen h-screen p-2 pt-5 overflow-hidden">
-      <Card image={activeCard.image} element={activeCard.element} />
+      <div className="">
+        <Card image={activeCard.image} element={activeCard.element} />
+      </div>
       <div className="whitespace-nowrap h-60 absolute top-0 overflow-x-hidden -translate-y-24">
         {drawnCards.map((card, index) => (
           <div
@@ -59,7 +61,9 @@ const App = () => {
           </div>
         ))}
       </div>
-      <Controls shuffleDeck={shuffleDeck} drawCard={drawCard} resetDeck={resetDeck} />
+      <div className="">
+        <Controls shuffleDeck={shuffleDeck} drawCard={drawCard} resetDeck={resetDeck} />
+      </div>
     </div>
   )
 }
