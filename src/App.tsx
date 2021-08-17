@@ -18,7 +18,7 @@ const App = () => {
   const drawCard = (): void => {
     const randIndex = Math.floor(Math.random() * deck.length)
     setActiveCard(deck[randIndex])
-    setDrawnCards([...new Set([activeCard, ...drawnCards])])
+    setDrawnCards([activeCard, ...drawnCards])
     setDeck(deck.filter((el) => el !== activeCard))
     if (deck.length === 0) setActiveCard({ element: 'empty', image: Achterkant })
   }
@@ -46,15 +46,26 @@ const App = () => {
   //   useEffect()
 
   return (
-    // <div className="bg-true-gray-200 dark:bg-gray-700 max-w-screen relative w-screen h-screen p-2 pt-5 overflow-hidden">
-    <div className="grid-cols-1 grid w-screen h-screen justify-center items-center grid-rows-[9fr,1fr]">
-      <div className="w-full h-full bg-orange-500">
-        <Card image={activeCard.image} element={activeCard.element} />
-      </div>
-      <div className="flex items-center h-full row-span-1 bg-green-500">
-        <Controls shuffleDeck={shuffleDeck} drawCard={drawCard} resetDeck={resetDeck} />
-      </div>
-      {/* <div className="">
+    <div className="bg-gradient-to-r from-gray-300 to-gray-500 dark:from-blue-gray-500 dark:via-blue-gray-600 dark:to-gray-700">
+      <div className="grid-cols-1 grid w-screen h-screen p-2 justify-center items-center grid-rows-[9fr,1fr]">
+        <div className="relative w-full h-full">
+          <div className="relative z-10 w-full h-full">
+            <Card image={activeCard.image} element={activeCard.element} />
+          </div>
+          {drawnCards.map((card, index) => (
+            <div
+              onClick={() => reviewCard(card)}
+              className={`absolute top-0 left-0 w-full h-full translate-x-[${index * 10}px] z-0 translate-y-[${index * 10}px]`}
+              key={index}
+            >
+              <Card image={card.image} element={card.element} />
+            </div>
+          ))}
+        </div>
+        <div className=" flex items-center h-full row-span-1">
+          <Controls shuffleDeck={shuffleDeck} drawCard={drawCard} resetDeck={resetDeck} />
+        </div>
+        {/* <div className="">
           <Card image={activeCard.image} element={activeCard.element} />
         </div>
         <div className="whitespace-nowrap h-60 absolute top-0 overflow-x-hidden -translate-y-24">
@@ -71,8 +82,8 @@ const App = () => {
         <div className="">
           <Controls shuffleDeck={shuffleDeck} drawCard={drawCard} resetDeck={resetDeck} />
         </div> */}
+      </div>
     </div>
-    // </div>
   )
 }
 
