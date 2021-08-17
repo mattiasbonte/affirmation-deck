@@ -35,7 +35,7 @@ const App = () => {
   }
 
   return (
-    <div className="bg-gradient-to-r from-gray-300 to-gray-500 dark:from-blue-gray-500 dark:via-blue-gray-600 dark:to-gray-700 overflow-hidden">
+    <div className="bg-dark-pattern overflow-hidden">
       <div className="grid-cols-1 grid w-screen h-screen p-2 justify-center items-center grid-rows-[9fr,1fr]">
         <div className={`relative w-full h-full transition-all ${flipCard ? 'translate-x-[-80%] translate-y-[-160%] -rotate-45 duration-300' : 'duration-700'}`}>
           <Card image={activeCard.image} element={activeCard.element} />
