@@ -65,7 +65,7 @@ const App = () => {
           >
             <ActiveCard image={activeCard.image} element={activeCard.element} />
           </div>
-          <div className=" z-10 flex items-center h-full mx-auto">
+          <div className="z-10 flex items-center h-full mx-auto">
             <Controls drawCard={drawCard} showInfoCard={showInfoCard} />
           </div>
         </div>

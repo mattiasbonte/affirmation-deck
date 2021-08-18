@@ -31,6 +31,7 @@ module.exports = {
       backgroundImage: (theme) => ({
         'dark-pattern': "url('../src/assets/Achtergrond.webp')",
         'card-pattern': "url('../src/assets/BG-Card.webp')",
+        'icon-spotify': "url('../src/assets/spotify.svg')",
       }),
     },
   },
