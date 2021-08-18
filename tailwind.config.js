@@ -29,9 +29,9 @@ module.exports = {
         rose: colors.rose,
       },
       backgroundImage: (theme) => ({
-        'dark-pattern': "url('../src/assets/Achtergrond.webp')",
-        'card-pattern': "url('../src/assets/BG-Card.webp')",
-        'icon-spotify': "url('../src/assets/spotify.svg')",
+        'pattern': "url('../src/assets/bg-pattern.webp')",
+        'info-card': "url('../src/assets/bg-info-card.webp')",
+        'icon-spotify': "url('../src/assets/icon-spotify.svg')",
       }),
     },
   },

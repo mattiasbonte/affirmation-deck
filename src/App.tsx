@@ -41,16 +41,9 @@ const App = () => {
   }
 
   return (
-    <div className="bg-card-pattern overflow-hidden bg-center bg-no-repeat bg-cover">
-      <div className="dark:bg-opacity-80 bg-opacity-20 dark:bg-black bg-white">
-        <div className="relative -translate-x-20 -translate-y-56">
-          {Deck.map((card, index) => (
-            <div key={index} className={`right-[${index * 10}px] w-full h-full`}>
-              <DeckCard drawCard={drawCard} key={index} />
-            </div>
-          ))}
-        </div>
-        <div className="grid-cols-1 grid w-screen h-screen p-2 justify-center items-center sm:grid-rows-[1fr,15fr,1fr] grid-rows-[1fr,8fr,1fr]">
+    <div className="bg-info-card sm:bg-pattern overflow-hidden bg-center bg-no-repeat bg-cover">
+      <div className="dark:bg-opacity-80 sm:bg-opacity-100 sm:bg-pattern bg-opacity-20 dark:bg-black bg-white">
+        <div className="grid-cols-1 grid w-screen h-screen px-2 justify-center items-center grid-rows-[1fr,15fr,3fr]">
           <div></div>
           <div
             className={`z-30 w-full h-full transition-all ${
