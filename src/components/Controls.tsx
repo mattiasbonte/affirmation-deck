@@ -5,9 +5,6 @@ interface Props {
 }
 
 const Controls = ({ drawCard, showInfoCard }: Props) => {
-  const gradient = ''
-  const hover = ''
-
   return (
     <>
       <button

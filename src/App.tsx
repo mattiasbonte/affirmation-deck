@@ -4,8 +4,6 @@ import Deck from './utils/Deck'
 import ActiveCard from './components/ActiveCard'
 import DeckCard from './components/DeckCard'
 import InfoCard from './assets/Kaarten/Varia/Info.webp'
-import plopSound from './assets/sounds/plopSound.mp3'
-import takeCardSound from './assets/sounds/takeCardSound.mp3'
 
 interface card {
   element: string
@@ -15,8 +13,6 @@ interface card {
 const App = () => {
   const [activeCard, setActiveCard]: [card, Function] = useState({ element: 'intro', image: InfoCard })
   const [flipCard, setFlipCard] = useState(false)
-  const takeCardEffect = new Audio(takeCardSound)
-  const plopEffect = new Audio(plopSound)
 
   const drawCard = (card: card): void => {
     if (flipCard) return
@@ -29,14 +25,12 @@ const App = () => {
         setActiveCard(Deck[randIndex])
       }
     }, 300)
-    plopEffect.play()
   }
 
   useEffect(() => {
     if (!flipCard) return
     setTimeout(() => {
       setFlipCard(!flipCard)
-      takeCardEffect.play()
     }, 1400)
   }, [flipCard])
 
