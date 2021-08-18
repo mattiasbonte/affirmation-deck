@@ -43,7 +43,7 @@ const App = () => {
   return (
     <div className="bg-info-card sm:bg-pattern overflow-hidden bg-center bg-no-repeat bg-cover">
       <div className="dark:bg-opacity-80 sm:bg-opacity-5 bg-opacity-20 dark:bg-black bg-white">
-        <div className="grid-cols-1 grid w-screen h-screen px-2 justify-center items-center grid-rows-[1fr,15fr,3fr]">
+        <div className="grid-cols-1 grid w-screen h-screen px-2 justify-center items-center grid-rows-[1fr,10fr,2fr] sm:grid-rows-[1fr,16fr,3fr]">
           <div></div>
           <div
             className={`z-30 w-full h-full transition-all ${
@@ -52,7 +52,7 @@ const App = () => {
           >
             <ActiveCard image={activeCard.image} element={activeCard.element} />
           </div>
-          <div className="z-10 flex items-center justify-between w-full h-full mx-auto">
+          <div className="lg:max-w-xl z-10 flex items-center justify-between w-full h-full mx-auto">
             <Controls drawCard={drawCard} showInfoCard={showInfoCard} />
           </div>
         </div>
