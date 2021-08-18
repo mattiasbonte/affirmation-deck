@@ -5,7 +5,7 @@
     "dev": "npm-run-all --parallel dev:*",
     "dev:server": "vite",
     "dev:css": "npx tailwindcss -o ./src/index.css --jit --watch",
-    "build": "tsc && tailwindcss -o ./src/index.css --minify && vite build",
+    "build": "tsc && tailwindcss -o ./src/index.css --jit --minify && vite build",
     "serve": "vite preview"
   },
   "dependencies": {
