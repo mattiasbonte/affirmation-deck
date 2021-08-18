@@ -48,7 +48,7 @@ const App = () => {
 
   return (
     <div className="bg-card-pattern overflow-hidden bg-center bg-no-repeat bg-cover">
-      <div className="dark:bg-opacity-80 bg-opacity-10 dark:bg-black bg-white">
+      <div className="dark:bg-opacity-80 bg-opacity-20 dark:bg-black bg-white">
         <div className="relative -translate-x-20 -translate-y-56">
           {Deck.map((card, index) => (
             <div key={index} className={`right-[${index * 10}px] w-full h-full`}>

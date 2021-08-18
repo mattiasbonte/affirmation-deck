@@ -13,7 +13,7 @@ const Controls = ({ drawCard, showInfoCard }: Props) => {
       <button
         onClick={() => drawCard()}
         type="button"
-        className="sm:w-48 hover:text-white rounded-md sm:rounded-xl p-1 sm:p-3 sm:font-bold uppercase w-20 border hover:border-gray-300 border-yellow-600 bg-gradient-to-r from-[#d1913c] via-[#ffd194] to-[#d1913c] hover:font-bold hover:via-amber-300"
+        className="sm:w-64 hover:text-white rounded-md sm:rounded-xl sm:text-xl p-1 sm:p-4 sm:font-bold uppercase w-20 border hover:border-gray-300 border-yellow-600 bg-gradient-to-r from-[#d1913c] via-[#ffd194] to-[#d1913c] hover:font-bold hover:via-amber-300"
         title="Draw A New Card"
       >
         Draw
