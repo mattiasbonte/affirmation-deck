@@ -42,7 +42,7 @@ const App = () => {
 
   return (
     <div className="bg-info-card sm:bg-pattern overflow-hidden bg-center bg-no-repeat bg-cover">
-      <div className="dark:bg-opacity-80 sm:bg-opacity-100 sm:bg-pattern bg-opacity-20 dark:bg-black bg-white">
+      <div className="dark:bg-opacity-80 sm:bg-opacity-5 bg-opacity-20 dark:bg-black bg-white">
         <div className="grid-cols-1 grid w-screen h-screen px-2 justify-center items-center grid-rows-[1fr,15fr,3fr]">
           <div></div>
           <div
