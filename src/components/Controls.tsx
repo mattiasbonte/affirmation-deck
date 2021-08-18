@@ -9,7 +9,7 @@ const Controls = ({ drawCard, showInfoCard }: Props) => {
   const hover = ''
 
   return (
-    <div className="mx-auto">
+    <>
       <button
         onClick={() => drawCard()}
         type="button"
@@ -21,12 +21,12 @@ const Controls = ({ drawCard, showInfoCard }: Props) => {
       <button
         onClick={() => showInfoCard()}
         type="button"
-        className="absolute m-2 left-0 bottom-0 h-8 w-8 text-white border border-gray-400 shadow-xl bg-[#494946] rounded-full hover:shadow-2xl hover:scale-110 hover:bg-gray-700 hover:border-gray-700"
+        className="absolute m-6 bg-gray-700 left-0 bottom-0 h-8 w-8 text-white border border-gray-400 shadow-xl dark:bg-[#494946] rounded-full hover:shadow-2xl hover:scale-110 dark:hover:bg-gray-700 hover:bg-gray-900 hover:border-gray-700"
         title="See Information Card"
       >
         ?
       </button>
-    </div>
+    </>
   )
 }
 
