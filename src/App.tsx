@@ -50,16 +50,16 @@ const App = () => {
             </div>
           ))}
         </div>
-        <div className="grid-cols-1 grid w-screen h-screen p-2 justify-center items-center grid-rows-[1fr,8fr,1fr]">
-          <div className="w-full h-full transition-all duration-700"></div>
+        <div className="grid-cols-1 grid w-screen h-screen p-2 justify-center items-center sm:grid-rows-[1fr,15fr,1fr] grid-rows-[1fr,8fr,1fr]">
+          <div></div>
           <div
-            className={`relative w-full h-full transition-all ${
+            className={`z-30 w-full h-full transition-all ${
               flipCard ? 'translate-x-[-80%] translate-y-[-160%] -rotate-45 duration-300' : 'duration-700'
             }`}
           >
             <ActiveCard image={activeCard.image} element={activeCard.element} />
           </div>
-          <div className="z-10 flex items-center h-full mx-auto">
+          <div className="z-10 flex items-center justify-between w-full h-full mx-auto">
             <Controls drawCard={drawCard} showInfoCard={showInfoCard} />
           </div>
         </div>
