@@ -5,7 +5,7 @@ interface Props {
 }
 
 const Controls = ({ drawCard, showInfoCard }: Props) => {
-  const general = 'shadow-xl active:border-2 active:border-white'
+  const general = 'shadow-xl active:border-2 active:border-white hover:border hover:border-white'
   const iconGeneral = 'z-10 h-8 w-8 mx-4 text-white active:text-amber-500 shadow-xl rounded-full'
   const gradient = 'bg-gradient-to-r from-[#d1913c] via-[#ffd194] to-[#d1913c]'
 
