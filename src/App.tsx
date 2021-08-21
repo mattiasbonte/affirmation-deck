@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Controls from './components/Controls'
 import Deck from './utils/Deck'
 import ActiveCard from './components/ActiveCard'
-import DeckCard from './components/DeckCard'
 import InfoCard from './assets/Kaarten/Varia/Info.webp'
 
 interface card {
