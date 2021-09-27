@@ -3,6 +3,7 @@ import Controls from './components/Controls'
 import Deck from './utils/Deck'
 import ActiveCard from './components/ActiveCard'
 import InfoCard from './assets/Kaarten/Varia/Info.webp'
+import AuthModal from './components/AuthModal'
 
 interface card {
   element: string
@@ -10,8 +11,18 @@ interface card {
 }
 
 const App = () => {
+  const [auth, setAuth] = useState(false)
   const [activeCard, setActiveCard]: [card, Function] = useState({ element: 'intro', image: InfoCard })
   const [flipCard, setFlipCard] = useState(false)
+
+  useEffect(() => {
+    checkAuth(localStorage.getItem('universalProtection'))
+  }, [])
+
+  const checkAuth = (input: null | string): void => {
+    if (input === 'BOWLOFLOVE11') setAuth(true)
+    localStorage.setItem('universalProtection', input)
+  }
 
   const drawCard = (card: card): void => {
     if (flipCard) return
@@ -37,6 +48,10 @@ const App = () => {
     const infoCard = { element: 'intro', image: InfoCard }
     if (activeCard.element === infoCard.element) return
     drawCard(infoCard)
+  }
+
+  if (!auth) {
+    return <AuthModal checkAuth={checkAuth} setAuth={setAuth} />
   }
 
   return (

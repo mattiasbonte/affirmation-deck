@@ -14,7 +14,7 @@ const Controls = ({ drawCard, showInfoCard }: Props) => {
       <button
         onClick={() => showInfoCard()}
         type="button"
-        title="See Information Card"
+        title="Toon de informatie kaart"
         className={`${general} ${iconGeneral} font-bold bg-gray-800 hover:bg-gray-900 dark:bg-gray-800 dark:hover:bg-gray-700  sm:dark:hover:bg-black`}
       >
         ?
@@ -22,16 +22,16 @@ const Controls = ({ drawCard, showInfoCard }: Props) => {
       <button
         onClick={() => drawCard()}
         type="button"
-        title="Draw A New Card"
+        title="Trek een nieuwe kaart"
         className={`${general} ${gradient} z-20 w-28 sm:w-48 p-2 m-2 rounded-md sm:rounded-xl hover:text-white sm:text-xl uppercase sm:font-bold active:via-amber-300 hover:font-bold active:font-white active:bg-via-black`}
       >
-        take
+        Trek
       </button>
       <a
         onClick={() => showInfoCard()}
         type="button"
         href="https://open.spotify.com/playlist/58fwSFriZEgBArKG2qtHwA?si=0jmOqvbFT8-CRWkFfTRCAg&dl_branch=1&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Fplaylist%2F58fwSFriZEgBArKG2qtHwA%3Fsi%3D0jmOqvbFT8-CRWkFfTRCAg%26dl_branch%3D1&feature=organic&_branch_match_id=838149087786642814"
-        title="Play Bloom With Tea Spotify Playlist"
+        title="Ga naar de 'Bloom With Tea' Spotify afspeellijst"
         className={`${general} ${iconGeneral} bg-icon-spotify bg-cover bg-center hover:bg-white active:bg-amber-400`}
       />
     </>
