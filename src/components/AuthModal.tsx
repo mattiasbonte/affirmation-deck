@@ -10,11 +10,8 @@ const AuthModal = ({ checkAuth, setAuth }: Props) => {
   const userInput = useRef(null)
 
   const checkValue = () => {
-    if (checkAuth(userInput.current?.value)) return setAuth(true)
-    setValidate(false)
-    setTimeout(() => {
-      setValidate(true)
-    }, 2000)
+    const input: any = userInput.current
+    if (checkAuth(input?.value)) return setAuth(true)
   }
 
   return (
