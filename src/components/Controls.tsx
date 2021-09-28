@@ -22,10 +22,10 @@ const Controls = ({ drawCard, showInfoCard }: Props) => {
       <button
         onClick={() => drawCard()}
         type="button"
-        title="Trek een nieuwe kaart"
-        className={`${general} ${gradient} z-20 w-28 sm:w-48 p-2 m-2 rounded-md sm:rounded-xl hover:text-white sm:text-xl uppercase sm:font-bold active:via-amber-300 hover:font-bold active:font-white active:bg-via-black`}
+        title="Neem een nieuwe kaart"
+        className={`${general} ${gradient} z-20 w-28 sm:w-48 p-2 m-2 rounded-md sm:rounded-xl hover:text-black sm:text-xl uppercase sm:font-bold active:via-amber-300 hover:font-bold active:font-white active:bg-via-black`}
       >
-        Trek
+        Kaart
       </button>
       <a
         onClick={() => showInfoCard()}

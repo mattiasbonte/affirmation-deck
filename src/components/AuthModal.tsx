@@ -12,6 +12,11 @@ const AuthModal = ({ checkAuth, setAuth }: Props) => {
   const checkValue = () => {
     const input: any = userInput.current
     if (checkAuth(input?.value)) return setAuth(true)
+
+    setValidate(false)
+    setTimeout(() => {
+      setValidate(true)
+    }, 2000)
   }
 
   return (
@@ -24,7 +29,7 @@ const AuthModal = ({ checkAuth, setAuth }: Props) => {
             id="userInput"
             type="text"
             name="userInput"
-            title="Openingszin"
+            title="Wachtwoord"
             onKeyUp={(e) => {
               if (e.key === 'Enter') return checkValue()
               if (e.key === 'Escape') return (e.currentTarget.value = '')
@@ -32,11 +37,11 @@ const AuthModal = ({ checkAuth, setAuth }: Props) => {
             className={`focus:ring-indigo-500 text-center focus:border-indigo-500 sm:text-sm w-52 p-3 pr-10 border-gray-300 rounded-md ${
               validate || 'bg-yellow-500'
             }`}
-            placeholder="Openingszin"
+            placeholder="Wachtwoord"
           />
           <div
             className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer"
-            onClick={() => alert('Voer de correcte openingszin in om toegang te krijgen tot de app')}
+            onClick={() => alert('Voer de correcte wachtwoord in om toegang te krijgen tot de app')}
           >
             <svg
               className="w-5 h-5 text-gray-400"
@@ -55,7 +60,7 @@ const AuthModal = ({ checkAuth, setAuth }: Props) => {
         </div>
       </div>
       <button
-        className={`px-4 py-2 w-52 text-sm font-medium text-white transition border-0 rounded-md hover:shadow-lg ${
+        className={`bg-gradient-to-r from-[#d1913c] via-[#ffd194] to-[#d1913c] shadow-xl active:border-2 active:border-white hover:border hover:border-white z-20 w-28 sm:w-48 p-2 m-2 rounded-md sm:rounded-xl hover:text-black sm:text-xl sm:font-bold active:via-amber-300 hover:font-bold active:font-white active:bg-via-black ${
           validate ? 'bg-blue-500 hover:bg-blue-600 active:bg-blue-700' : 'uppercase bg-red-500 hover:bg-red-600 active:bg-red-700'
         }`}
         onClick={() => checkValue()}

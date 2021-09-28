@@ -19,10 +19,12 @@ const App = () => {
     checkAuth(localStorage.getItem('universalProtection'))
   }, [])
 
-  const checkAuth = (input: null | string): void => {
+  const checkAuth = (input: null | string): boolean => {
     if (input === 'BOWLOFLOVE11') setAuth(true)
     input ??= ''
     localStorage.setItem('universalProtection', input)
+
+    return auth
   }
 
   const drawCard = (card: card): void => {
