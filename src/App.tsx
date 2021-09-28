@@ -21,6 +21,7 @@ const App = () => {
 
   const checkAuth = (input: null | string): void => {
     if (input === 'BOWLOFLOVE11') setAuth(true)
+    input ??= ''
     localStorage.setItem('universalProtection', input)
   }
 
