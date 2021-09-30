@@ -21,30 +21,13 @@ const AuthModal = ({ checkAuth, setAuth }: Props) => {
 
   return (
     <div className="bg-pattern flex flex-col items-center justify-center h-screen bg-center bg-no-repeat bg-cover">
-      <h2 className={`${validate ? 'text-blue-400' : 'text-yellow-400'} font-extralight text-3xl text-center uppercase`}>Bloom With Tea</h2>
-      <div>
-        <div className="relative my-3 rounded-md shadow-sm">
-          <input
-            ref={userInput}
-            id="userInput"
-            type="text"
-            name="userInput"
-            title="Wachtwoord"
-            onKeyUp={(e) => {
-              if (e.key === 'Enter') return checkValue()
-              if (e.key === 'Escape') return (e.currentTarget.value = '')
-            }}
-            className={`focus:ring-indigo-500 text-center focus:border-indigo-500 sm:text-sm w-52 p-3 pr-10 border-gray-300 rounded-md ${
-              validate || 'bg-yellow-500'
-            }`}
-            placeholder="Wachtwoord"
-          />
-          <div
-            className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer"
-            onClick={() => alert('Voer de correcte wachtwoord in om toegang te krijgen tot de app')}
-          >
+      <h2 className="text-[#d1913c] font-extralight text-3xl mb-2 text-center uppercase">Bloom With Tea</h2>
+      <div className="inline-flex h-auto">
+        <div className="relative h-full rounded-md shadow-sm">
+          <label htmlFor="userInput" className="absolute inset-y-0 left-0 flex items-center pl-3 cursor-pointer">
             <svg
-              className="w-5 h-5 text-gray-400"
+              className="hover:text-black w-5 h-5 text-gray-400"
+              onClick={() => alert('Voer de correcte wachtwoord in om toegang te krijgen tot de app')}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
@@ -56,18 +39,29 @@ const AuthModal = ({ checkAuth, setAuth }: Props) => {
                 clip-rule="evenodd"
               />
             </svg>
-          </div>
+          </label>
+          <input
+            ref={userInput}
+            id="userInput"
+            type="text"
+            name="userInput"
+            title="Wachtwoord"
+            onKeyUp={(e) => {
+              if (e.key === 'Enter') return checkValue()
+              if (e.key === 'Escape') return (e.currentTarget.value = '')
+            }}
+            className={`text-center h-full sm:text-sm w-52 p-3 border-gray-300 rounded-l-md ${validate || 'bg-rose-300'}`}
+            placeholder="Wachtwoord"
+          />
         </div>
+        <button
+          className="rounded-r-md relative inline-flex items-center px-3 text-gray-700 bg-white border border-gray-300 bg-gradient-to-r from-[#d1913c] via-[#dfac6b] to-[#d1913c]"
+          onClick={() => checkValue()}
+          title="Open kaart deck"
+        >
+          {validate ? '🗝' : '🔒'}
+        </button>
       </div>
-      <button
-        className={`bg-gradient-to-r from-[#d1913c] via-[#ffd194] to-[#d1913c] shadow-xl active:border-2 active:border-white hover:border hover:border-white z-20 w-28 sm:w-48 p-2 m-2 rounded-md sm:rounded-xl hover:text-black sm:text-xl sm:font-bold active:via-amber-300 hover:font-bold active:font-white active:bg-via-black ${
-          validate ? 'bg-blue-500 hover:bg-blue-600 active:bg-blue-700' : 'uppercase bg-red-500 hover:bg-red-600 active:bg-red-700'
-        }`}
-        onClick={() => checkValue()}
-        title="Valideer openingszin"
-      >
-        {validate ? 'Valideer' : 'Incorrect...'}
-      </button>
     </div>
   )
 }
