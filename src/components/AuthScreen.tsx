@@ -27,7 +27,7 @@ const AuthModal = ({ checkAuth, setAuth }: Props) => {
         <h2 className="text-white/40 font-extralight mb-2 text-2xl text-center">Bloom With Tea</h2>
       </div>
       <div className="inline-flex h-auto">
-        <div className="relative h-full shadow-sm">
+        <div className="relative h-full bg-white rounded-md shadow-sm">
           <label htmlFor="userInput" className="absolute inset-y-0 left-0 flex items-center pl-3 cursor-pointer">
             <svg
               className="hover:text-black w-5 h-5 text-gray-400"
