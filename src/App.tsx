@@ -3,7 +3,7 @@ import Controls from './components/Controls'
 import Deck from './utils/Deck'
 import ActiveCard from './components/ActiveCard'
 import InfoCard from './assets/Kaarten/Varia/Info.webp'
-import AuthModal from './components/AuthModal'
+import AuthModal from './components/AuthScreen'
 
 interface card {
   element: string

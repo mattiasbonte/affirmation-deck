@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import BloomLogo from '../assets/PWA/android-chrome-256x256.png'
 
 interface Props {
   checkAuth: Function
@@ -21,9 +22,12 @@ const AuthModal = ({ checkAuth, setAuth }: Props) => {
 
   return (
     <div className="bg-pattern flex flex-col items-center justify-center h-screen bg-center bg-no-repeat bg-cover">
-      <h2 className="text-[#d1913c] font-extralight text-3xl mb-2 text-center uppercase">Bloom With Tea</h2>
+      <img src={BloomLogo} alt="Bloom Logo" className="w-40" />
+      <div className="flex items-center justify-center">
+        <h2 className="text-white/40 font-extralight mb-2 text-2xl text-center">Bloom With Tea</h2>
+      </div>
       <div className="inline-flex h-auto">
-        <div className="relative h-full rounded-md shadow-sm">
+        <div className="relative h-full shadow-sm">
           <label htmlFor="userInput" className="absolute inset-y-0 left-0 flex items-center pl-3 cursor-pointer">
             <svg
               className="hover:text-black w-5 h-5 text-gray-400"
